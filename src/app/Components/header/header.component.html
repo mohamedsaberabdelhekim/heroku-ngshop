@@ -1,0 +1,103 @@
+<div class="bg-white shadow-sm z-40 sticky top-0 w-full">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-1 md:py-4">
+    <div class="flex items-center justify-between md:justify-start">
+      <!-- Menu Trigger -->
+      <button (click)="toggleNavbar()" type="button"
+        class="md:hidden w-10 h-10 rounded-lg -ml-2 flex justify-center items-center">
+        <svg class="text-gray-500 w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <!-- ./ Menu Trigger -->
+
+      <a routerLink="/" class="font-bold text-gray-700 lg:text-2xl sm:text-xs">
+
+        <span class=" flex">
+          <svg class="h-5 w-5 text-indigo-700" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M16.2721 10.2721C16.2721 12.4813 14.4813 14.2721 12.2721 14.2721C10.063 14.2721 8.27214 12.4813 8.27214 10.2721C8.27214 8.06298 10.063 6.27212 12.2721 6.27212C14.4813 6.27212 16.2721 8.06298 16.2721 10.2721ZM14.2721 10.2721C14.2721 11.3767 13.3767 12.2721 12.2721 12.2721C11.1676 12.2721 10.2721 11.3767 10.2721 10.2721C10.2721 9.16755 11.1676 8.27212 12.2721 8.27212C13.3767 8.27212 14.2721 9.16755 14.2721 10.2721Z"
+              fill="currentColor" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M5.79417 16.5183C2.19424 13.0909 2.05438 7.39409 5.48178 3.79417C8.90918 0.194243 14.6059 0.054383 18.2059 3.48178C21.8058 6.90918 21.9457 12.6059 18.5183 16.2059L12.3124 22.7241L5.79417 16.5183ZM17.0698 14.8268L12.243 19.8965L7.17324 15.0698C4.3733 12.404 4.26452 7.97318 6.93028 5.17324C9.59603 2.3733 14.0268 2.26452 16.8268 4.93028C19.6267 7.59603 19.7355 12.0268 17.0698 14.8268Z"
+              fill="currentColor" />
+          </svg>
+          {{storeData.Name}}
+        </span>
+      </a>
+      <nav class=" md:flex space-x-3 md:flex-1 lg:ml-8
+     collapse lg:navbar-collapse" id="navbarNav" [ngClass]="{'hidden': !showMenu, 'flex': showMenu}">
+
+
+
+        <div class="lg:text-lg sm:text-xs">
+          
+          <a href="#" class="px-2 py-2 lg:mx-3 hover:bg-gray-100 rounded-lg text-gray-400 hover:text-gray-600"
+            routerLinkActive="router-link-active" routerLink="Home">Home</a>
+          <a href="#" class="px-2 py-2 lg:mx-3 hover:bg-gray-100 rounded-lg text-gray-400 hover:text-gray-600"
+            routerLinkActive="router-link-active" routerLink="products">Shop</a>
+          <a href="#" class="px-2 py-2 lg:mx-3  hover:bg-gray-100 rounded-lg text-gray-400 hover:text-gray-600"
+            routerLinkActive="router-link-active" routerLink="contact">Contact</a>
+          <a href="#" class="px-2 py-2 lg:mx-3 hover:bg-gray-100 rounded-lg text-gray-400 hover:text-gray-600"
+            routerLinkActive="router-link-active" routerLink="about">About</a>
+        </div>
+
+      </nav>
+
+      <div class="flex items-center space-x-4">
+        <div class="relative hidden md:block">
+          <input type="search"
+            class="pl-10 pr-2 h-10 py-1 rounded-lg border border-gray-200 focus:border-gray-300 focus:outline-none focus:shadow-inner leading-none"
+            placeholder="Search">
+          <svg class="h-6 w-6 text-gray-300 ml-2 mt-2 stroke-current absolute top-0 left-0"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </div>
+
+        <a (click)="togglecart()" class="flex h-10 items-center
+           px-2 rounded-lg border
+           border-gray-200
+           hover:border-gray-300
+           focus:outline-none
+           hover:shadow-inner ">
+          <svg class="h-6 w-6 leading-none text-gray-300 stroke-current" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+          <span class="pl-1 text-gray-500 text-md">{{itemCart}}</span>
+        </a>
+
+        <button type="button"
+          class="hidden md:block w-10 h-10 rounded-lg bg-gray-100 border border-gray-200 flex justify-center items-center">
+          <img src="https://avatars.dicebear.com/api/bottts/2.svg" alt="bottts" width="28" height="28"
+            class="rounded-lg mx-auto">
+        </button>
+      </div>
+    </div>
+
+    <!-- Search Mobile -->
+    <div class="relative md:hidden">
+      <input type="search"
+        class="mt-1 w-full pl-10 pr-2 h-10 py-1 rounded-lg border border-gray-200 focus:border-gray-300 focus:outline-none focus:shadow-inner leading-none"
+        placeholder="Search">
+
+      <svg class="h-6 w-6 text-gray-300 ml-2 mt-3 stroke-current absolute top-0 left-0"
+        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+    </div>
+    <!-- ./ Search Mobile -->
+
+  </div>
+
+
+
+
+
+
+  <app-cart *ngIf="Status"></app-cart>
+</div>

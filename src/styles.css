@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.router-link-active {
+  border-style: solid;
+  --tw-bg-opacity: 2;
+  color: rgb(37 99 235 / var(--tw-bg-opacity));
+}

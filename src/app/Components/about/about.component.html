@@ -1,0 +1,80 @@
+<!-- component -->
+<div class="2xl:container 2xl:mx-auto md:py-12 lg:px-20 md:px-6 py-9 px-4">
+    <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
+                <h2 class="font-semibold dark:text-white lg:text-4xl text-3xl lg:leading-9 md:leading-7 leading-9 text-gray-800">Frequently Asked Questions</h2>
+                
+                <div class="flex md:flex-row flex-col md:space-x-8 md:mt-16 mt-8">
+                    
+                    <div class=" w-full md:mt-0 sm:mt-14 mt-10">
+                        <!-- Shipping Section -->
+                        <div>
+                            <div class="flex justify-between items-center cursor-pointer">
+                                <h3 class="font-semibold text-xl  dark:text-white leading-5 text-gray-800">Shipping</h3>
+                                <button  aria-label="too" class="text-gray-800 dark:text-white cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800" (click)="openAnsSection('1')">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path id="path1" class="" d="M10 4.1665V15.8332" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M4.16602 10H15.8327" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <p [ngClass]="{'hidden': !opitan1, 'flex': opitan1}" id="para1" class="font-normal dark:text-gray-400 text-base leading-6 text-gray-600 mt-4 w-11/12">We are covering every major country worldwide. The shipment leaves from US as it is our headquarter. Some extra information you probably need to add here so that the customer is clear of their wanted expectations.</p>
+                        </div>
+        
+                        <hr class="my-7 bg-gray-200" />
+        
+                        <!-- Returns Section -->
+        
+                        <div>
+                            <div class="flex justify-between items-center cursor-pointer">
+                                <h3 class="font-semibold text-xl dark:text-white  leading-5 text-gray-800">Returns</h3>
+                                <button aria-label="too" class="text-gray-800 dark:text-white cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800" (click)="openAnsSection('2')">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path id="path2" class="" d="M10 4.1665V15.8332" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M4.16602 10H15.8327" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <p [ngClass]="{'hidden': !opitan2, 'flex': opitan2}" id="para2" class=" font-normal dark:text-gray-400 text-base leading-6 text-gray-600 mt-4 w-11/12">We are covering every major country worldwide. The shipment leaves from US as it is our headquarter. Some extra information you probably need to add here so that the customer is clear of their wanted expectations.</p>
+                        </div>
+        
+                        <hr class="my-7 bg-gray-200" />
+        
+                        <!-- Exchange Section -->
+        
+                        <div>
+                            <div class="flex justify-between items-center cursor-pointer">
+                                <h3 class="font-semibold text-xl dark:text-white  leading-5 text-gray-800">Exchange</h3>
+                                <button  aria-label="too" class="text-gray-800 dark:text-white cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800" (click)="openAnsSection('3')">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path id="path3" d="M10 4.1665V15.8332" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M4.16602 10H15.8327" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <p [ngClass]="{'hidden': !opitan3, 'flex': opitan3}" id="para3" class=" font-normal dark:text-gray-400 text-base leading-6 text-gray-600 mt-4 w-11/12">We are covering every major country worldwide. The shipment leaves from US as it is our headquarter. Some extra information you probably need to add here so that the customer is clear of their wanted expectations.</p>
+                        </div>
+        
+                        <hr class="my-7 bg-gray-200" />
+        
+                        <!-- Tracking Section -->
+        
+                        <div>
+                            <div class="flex justify-between items-center cursor-pointer">
+                                <h3 class="font-semibold text-xl dark:text-white  leading-5 text-gray-800">Tracking</h3>
+                                <button  aria-label="too" class="text-gray-800 dark:text-white cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800" (click)="openAnsSection(4)">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path id="path4" d="M10 4.1665V15.8332" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M4.16602 10H15.8327" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <p [ngClass]="{'hidden': !opitan4, 'flex': opitan4}" id="para4" class=" font-normal dark:text-gray-400 text-base leading-6 text-gray-600 mt-4 w-11/12">We are covering every major country worldwide. The shipment leaves from US as it is our headquarter. Some extra information you probably need to add here so that the customer is clear of their wanted expectations.</p>
+                        </div>
+        
+                        <hr class="my-7 bg-gray-200" />
+                    </div>
+                </div>
+            </div>
+            <script>
+            
+    </script>
